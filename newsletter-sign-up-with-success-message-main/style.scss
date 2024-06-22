@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+html {
+  font-size: 62.5%;
+}
+//! hide
+
+#hide {
+  display: none;
+}
+//* THE BODY
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(235, 18%, 26%);
+  @media (max-width: 650px) {
+    height: fit-content;
+    display: block;
+    background: #fff;
+  }
+}
+
+//* The container
+
+.container {
+  width: fit-content;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: row-reverse;
+
+  background: hsl(0, 0%, 100%);
+  border-radius: 2.5rem;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+
+  overflow: hidden;
+  //? media queries
+  //tablet
+  @media (max-width: 750px) {
+    padding: 0.5rem;
+  }
+
+  //mobile
+  @media (max-width: 650px) {
+    width: 100%;
+    height: fit-content;
+
+    padding: 0;
+    border-radius: 0;
+
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+}
+
+//* THE img section
+.img_section {
+  height: 45rem;
+  width: 50%;
+  background: hsl(0, 0%, 100%);
+  transform: translate(1.4rem, 0px);
+  overflow: hidden;
+  //*the SVG element
+  svg {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+    //tablet
+    @media (max-width: 750px) {
+      padding-right: 2rem;
+    }
+
+    @media (max-width: 650px) {
+      padding: 0;
+      width: 100%;
+      height: fit-content;
+      transform: translateY(-10rem);
+      max-height: 50rem;
+    }
+
+    @media (max-width: 460px) {
+      transform: none;
+    }
+  }
+
+  //? media queries
+
+  @media (max-width: 650px) {
+    width: 100%;
+    height: 30rem;
+    transform: none;
+  }
+}
+
+//* The main Section
+.main_section {
+  height: 45rem;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 4rem 0rem 0 3rem;
+
+  color: hsl(234, 29%, 20%);
+  //* The header
+
+  &-header {
+    color: hsl(234, 29%, 20%);
+    font-weight: 700;
+    font-size: 4.5rem;
+
+    &-2 {
+      margin: 1.5rem 0;
+      font-weight: 400;
+      font-size: 1.3rem;
+      line-height: 1.9rem;
+      @media (max-width: 650px) {
+        margin-top: 2rem;
+        align-items: center;
+        padding: 0;
+        width: 90%;
+      }
+    }
+  }
+  //tablet
+  @media (max-width: 650px) {
+    margin-top: 2rem;
+    align-items: center;
+    padding: 0;
+    width: 90%;
+  }
+}
+
+//* the List
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  //*Items
+  &_item {
+    display: flex;
+    gap: 1.1rem;
+    align-items: center;
+
+    font-size: 1.3rem;
+  }
+
+  //*the icons
+
+  &_icon {
+    scale: 0.75;
+    transform: translateY(2px);
+  }
+
+  @media (max-width: 650px) {
+    // margin-top: -5rem;
+    width: 90%;
+  }
+}
+
+//* the input field
+
+.input_field {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  width: 100%;
+
+  &-textBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: red;
+  }
+
+  // *the title
+  &-title {
+    color: hsl(234, 29%, 20%);
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+  }
+
+  //* input
+  &-email {
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+    outline: none;
+    border: 1px solid hsl(240, 5%, 80%);
+    border-radius: 5px;
+
+    cursor: pointer;
+    //? ACTIVE
+    &:focus {
+      border-color: black;
+    }
+  }
+
+  &-btn,
+  &-btn:link,
+  &-btn:visited {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    height: 4rem;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(234, 29%, 20%);
+
+    font-weight: 500;
+    color: #fff;
+    font-size: 1.3rem;
+
+    cursor: pointer;
+    transition: 0.2s all;
+    //? ACTIVE STATE
+
+    &:hover {
+      background-image: linear-gradient(to right, rgb(253, 85, 119), hsl(4, 100%, 67%));
+      box-shadow: 0 1rem 1rem 0rem hsla(4, 100%, 67%, 0.5);
+    }
+  }
+}
+
+////////////////////////////////// JS
+.error{
+    background: rgb(255, 232, 230);
+    border-color: red;
+    
+    &::placeholder{
+        color: red;
+    }
+    display: block;
+}
+.hide{
+    display: none;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- displays site properly based on user's device -->
+
+      <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/succsse.css" />
+      <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+      <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+      <style>
+        .attribution {
+          font-size: 11px;
+          text-align: center;
+        }
+        .attribution a {
+          color: hsl(228, 45%, 44%);
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <section class="success_section">
+          <div class="success_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+              <defs>
+                <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                  <stop offset="0%" stop-color="#FF6A3A" />
+                  <stop offset="100%" stop-color="#FF527B" />
+                </linearGradient>
+              </defs>
+              <g fill="none">
+                <circle cx="32" cy="32" r="32" fill="url(#a)" />
+                <path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285" />
+              </g>
+            </svg>
+          </div>
+
+          <!-- the thx message -->
+          <h2 class="main_section-header success_section-header">Thanks for subscribing!</h2>
+
+          <!-- the pargraph -->
+          <p class="success_section-text">
+            A confirmation email has been sent to <br />
+            <span id="currentEmail">example@gmail.com</span>. Please open it and click the button inside to confirm your subscription.
+          </p>
+          <!-- the button -->
+          <button class="input_field-btn success_section-btn">Dismiss message</button>
+        </section>
+      </div>
+    </body><script src="success.js"></script>
+  </html>
+</html>
