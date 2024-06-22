@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(237, 242, 248);
+  display: grid;
+  place-content: center;
+  margin: 0 2rem;
+}
+.container {
+  width: 80rem;
+  height: 30rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 2rem 0 rgba(0, 0, 0, 0.063);
+  display: flex;
+  position: relative;
+}
+.image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem 0 0 1rem;
+}
+.image img {
+  object-position: -2px 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content {
+  margin: 0rem 4.5rem;
+  margin-right: 0;
+}
+.text {
+  margin-top: 2.8rem;
+}
+h1 {
+  font-size: 2.3rem;
+  width: 89%;
+  color: hsl(217, 66%, 26%);
+  margin-bottom: 1rem;
+}
+p {
+  width: 98%;
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  color: hsl(214, 17%, 51%);
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 2.5rem 0;
+}
+.id {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+}
+.id img {
+  width: 4.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.id .name {
+  width: 62%;
+  display: flex;
+  flex-flow: column;
+}
+.person-name {
+  font-weight: 700;
+  font-size: 1.6rem;
+  white-space: nowrap;
+  color: hsl(216, 32%, 32%);
+}
+.id .name p {
+  font-weight: 700;
+  color: hsl(212, 33%, 76%);
+}
+button {
+  margin-right: 4rem;
+  border: 0;
+  border-radius: 50%;
+  transform: scale(1.1);
+  padding: 0.7rem.8rem;
+  padding-top: 0.8rem;
+  color: rgb(110, 128, 151);
+  background-color: rgb(237, 241, 250);
+  position: relative;
+  cursor: pointer;
+  transition: 0.25s color, 0.25s background-color;
+}
+button:focus {
+  color: white;
+  background-color: rgb(110, 128, 151);
+}
+.social {
+  top: 14rem;
+  left: 61.8rem;
+  position: absolute;
+  z-index: 1;
+  background-color: rgb(73, 85, 107);
+  width: 24.5rem;
+  height: 5.2rem;
+  border-radius: 1rem;
+  color: white;
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0rem 2px 10px 2px hsla(217, 19%, 35%, 0.26);
+}
+.social::after {
+  content: "";
+  position: absolute;
+  height: 3rem;
+  width: 5rem;
+  background-color: rgb(73, 85, 107);
+  bottom: 0px;
+  left: 9.25rem;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+.social-text {
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1.2rem;
+  color: rgb(159, 173, 194);
+  letter-spacing: 5px;
+  font-variant: small-caps;
+}
+.social .icons {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1.2rem;
+  transform: scale(0.95);
+  cursor: pointer;
+ 
+}
+.icons svg{
+    margin: 0 .6rem;
+     transition: .25s transform;
+    color: white;
+     
+}
+.icons svg:hover{
+  
+   transform: scale(1.5);
+   
+}
+
+/* the js code */
+.hiddenW {
+  display: flex;
+  animation: hideW 0.5s;
+}
+@keyframes hideW {
+  0% {
+    top: 14rem;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    top: 16rem;
+  }
+}
+.showW {
+  display: flex;
+  animation: showW 0.5s;
+}
+@keyframes showW {
+  0% {
+    opacity: 0;
+    top: 16rem;
+  }
+  50% {
+    top: 13.5rem;
+  }
+  100% {
+    top: 14rem;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 931px) {
+  body {
+    min-height: 100vh;
+    height: fit-content;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  .container {
+    flex-flow: column;
+    width: 35rem;
+    height: fit-content;
+     overflow: hidden;
+   
+  }
+
+  .image {
+    width: 100%;
+    height: 36%;
+    border-radius: 0;
+  }
+  .image img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 0;
+  }
+  .content {
+    margin-top: 0.8rem;
+    margin-left: 3rem;
+  }
+  .content .text h1 {
+    font-size: 1.8rem;
+    width: 89%;
+  }
+  .content .text p {
+    font-size: 1.4rem;
+    width: 86%;
+  }
+  footer {
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  .id {
+    gap: 1.6rem;
+  }
+  .id img {
+    width: 4.2rem;
+    margin-top: 0.3rem;
+  }
+  .id .name .person-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: rgb(79, 87, 100);
+  }
+  .name p {
+    font-size: 1.4rem;
+    white-space: nowrap;
+  }
+  .icons svg{
+    transform: scale(1);
+    border-radius: 0;
+  }
+  button{
+    z-index: 2;
+  }
+  .social {
+    display: none;
+    justify-content: start;
+    padding-left: 3rem;
+    gap: 1rem;
+    position: absolute;
+    top:2rem;
+    left: -3rem;
+    width: 35rem;
+    height: 7.5rem;
+    border-radius: 0;
+    overflow: hidden;
+   
+    z-index: 1;
+  }
+  .social::after{
+    display: none ;
+  }
+
+  button:focus {
+    color: white;
+    background-color: rgb(109, 127, 153);
+  }
+}
+.showP{
+    display: flex;
+    animation: showP .5s alternate ;
+}
+@keyframes showP{
+    0%{
+        height: 0;
+        
+    }
+    100%{
+         height: 7.5rem;
+          
+    }
+}
+.hiddenP {
+  display: flex;
+  animation: hideP 0.5s;
+}
+@keyframes hideP{
+     0%{
+         height: 7.5rem;
+       
+        
+    }
+   100%{
+        
+         height: 0rem;
+          
+    }
+}
