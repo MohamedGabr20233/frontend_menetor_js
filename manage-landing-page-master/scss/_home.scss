@@ -1,0 +1,14 @@
+// backgrounds
+body {
+   background-image: url(../images/bg-tablet-pattern.svg);
+   background-size: 50rem;
+   background-repeat: no-repeat;
+   background-position: 110% -10rem;
+}
+
+.custom_feature_bg {
+   position: absolute;
+   scale: .8;
+   left: -25rem;
+   bottom: -30rem;
+}
